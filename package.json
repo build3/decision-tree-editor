@@ -1,0 +1,23 @@
+{
+  "name": "decision-tree-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:build3/decision-tree-editor.git",
+  "private": true,
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-run-script": "^2.2.1",
+    "@snowpack/plugin-svelte": "^3.3.1",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "rollup": "^2.34.2",
+    "snowpack": "^2.18.2",
+    "svelte": "^3.31.0",
+    "watch": "^1.0.2"
+  }
+}
