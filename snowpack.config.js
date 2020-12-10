@@ -4,7 +4,7 @@ module.exports = {
     [
       '@snowpack/plugin-run-script',
       {
-        cmd: 'eslint "src/**/*.{js,svelte}"',
+        cmd: 'eslint --ext .js,.svelte src/**/*.{js,svelte}',
         watch: 'watch "$1" src',
       },
     ],

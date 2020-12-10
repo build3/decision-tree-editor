@@ -26,8 +26,5 @@ module.exports = {
     'import/no-duplicates': 'off',
     'import/no-mutable-exports': 'off',
     'import/no-unresolved': 'off',
-  },
-  extensions: [
-    '.js', '.svelte',
-  ],
+  }
 };
