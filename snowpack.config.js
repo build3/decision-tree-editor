@@ -8,10 +8,22 @@ module.exports = {
         watch: 'watch "$1" src',
       },
     ],
+    [
+      'snowpack-plugin-optimize',
+      {
+        minifyJs: true,
+        modulePreload: true,
+        minifyCss: true,
+        minifyHtml: true,
+      },
+    ],
   ],
   mount: {
     public: '/',
     src: '/_dist_',
+  },
+  buildOptions: {
+    clean: true,
   },
   devOptions: {
     port: 8000,
