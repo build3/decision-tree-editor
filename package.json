@@ -19,5 +19,9 @@
     "snowpack": "^2.18.2",
     "svelte": "^3.31.0",
     "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sweetalert2": "^10.12.4"
   }
 }

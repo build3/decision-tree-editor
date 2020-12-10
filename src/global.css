@@ -1,0 +1,210 @@
+html, body, #app {
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/assets/font/Cabin-Regular.otf") format("opentype"),
+    url("/assets/font/Cabin-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Fantasque Sans Mono";
+  src: url("/assets/font/fantasquesansmono-regular.otf") format("opentype");
+}
+
+main {
+  box-sizing: border-box;
+  display: grid !important;
+  grid-column-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+
+main > * {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1rem;
+}
+
+main > *:nth-child(even) {
+  background-color: aliceblue;
+}
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.inputRow {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.inputRow > *:first-child {
+  margin-right: 0.5rem;
+}
+
+.inputRowVertical {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.inputRowVertical > *:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  height: 1.25rem;
+  padding: 0.125rem;
+  flex: 1;
+  outline-color: gray;
+  outline-width: 1px;
+}
+
+.topLabel {
+  align-items: center;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+textarea {
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  flex: 1;
+  font-family: "Fantasque Sans Mono", monospace;
+  font-size: 0.75rem;
+  outline-color: gray;
+  resize: none;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+button {
+  align-items: center;
+  background-color: #00b4d8;
+  border: 0px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 2rem;
+  display: inline-flex;
+  outline: black;
+  padding: 0 0.5rem;
+  transition: background-color 0.25s ease-out;
+}
+
+button:hover {
+  background-color: #48cae4;
+}
+
+button > div {
+  font-weight: bold;
+  line-height: 1.15;
+  margin-right: 0.5rem;
+}
+
+button > img {
+  height: 100%;
+  width: 1rem;
+}
+
+button.iconButton {
+  align-items: center;
+  background-color: transparent;
+  border: 0px;
+  border-radius: 1.5rem;
+  color: black;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: 0;
+  stroke-width: 2;
+  width: 1.5rem;
+}
+
+button.iconButton:hover {
+  background-color: transparent;
+}
+
+button.iconButton > svg {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+@keyframes popup-show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popup-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes toast-show {
+  0% {
+    transform: translateY(calc(-100% - 0.625em));
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes toast-hide {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(calc(-100% - 0.625em));
+  }
+}
+
+.swal2-popup.swal2-show {
+  animation-name: popup-show;
+}
+
+.swal2-popup.swal2-hide {
+  animation-name: popup-hide;
+}
+
+.swal2-popup.swal2-toast.swal2-show {
+  animation-name: toast-show;
+}
+
+.swal2-popup.swal2-toast.swal2-hide {
+  animation-name: toast-hide;
+}
+
+button.swal2-styled {
+  padding-bottom: 0;
+  padding-top: 0;
+}
