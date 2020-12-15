@@ -1,0 +1,250 @@
+{
+  "message": "<div class=\"message-header\">Welcome</div><br /><h2>Welcome to the Research IT Resources Guide.</h2><p>What do you need more information on?</p>",
+  "decisions": [
+    {
+      "answer": "Data Acquisition",
+      "class": "yellow",
+      "message": "<div class=\"message-header\">Data Acquisition</div><br /><h2>Data can be captured or resides in many formats.</h2><p>Does the data you need already exist?</p>",
+      "decisions": [
+        {
+          "answer": "Yes",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Data Curation Experts</div><p>There are many places on campus that can help connect you with the data you need. The <a href=\"http://library.vanderbilt.edu/scholarly/data.php\" rel=\"noopener noreferrer\" target=\"_blank\">Jean and Alexander Heard Library</a>, as well as the <a href=\"https://www.vanderbilt.edu/datascience/\" rel=\"noopener noreferrer\" target=\"_blank\">Data Science Institute</a> and the <a href=\"https://www.vanderbilt.edu/digitalhumanities/\" rel=\"noopener noreferrer\" target=\"_blank\">Center for Digital Humanities</a> can help to connect you with databases already in existence. Also worth consulting with, the Vanderbilt <a href=\"https://www.vanderbilt.edu/digitalhumanities/\" rel=\"noopener noreferrer\" target=\"_blank\">Creative Data Solutions Shared Resource.</a></p>"
+        },
+        {
+          "answer": "No",
+          "class": "red",
+          "message": "<div class=\"message-header\">No</div><p>Do you need to collect your data?</p>",
+          "decisions": [
+            {
+              "answer": "Yes",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">Yes- Data Collection Tools</div><p><a href=\"https://www.vanderbilt.edu/datascience/\" rel=\"noopener noreferrer\" target=\"_blank\">RedCap</a></p><p><a href=\"https://opendatakit.org/\" rel=\"noopener noreferrer\" target=\"_blank\">Open Data Kit</a></p><p><a href=\"https://www.library.vanderbilt.edu/scholarly/data.php\" rel=\"noopener noreferrer\" target=\"_blank\">Data Curation Specialist</a></p>"
+            },
+            {
+              "answer": "No",
+              "class": "red",
+              "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+            },
+            {
+              "answer": "Not Sure",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+            }
+          ]
+        },
+        {
+          "answer": "Not Sure",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+        }
+      ]
+    },
+    {
+      "answer": "Data Analysis",
+      "class": "yellow",
+      "message": "<div class=\"message-header\">Data Analysis</div><br /><h2>Data analysis comes in many flavors, the solution depends on the type of outcome or research you are performing. Some of these types of analysis overlap, so choose the answer that best fits your need</h2><p>What type of analysis do you need?</p>",
+      "decisions": [
+        {
+          "answer": "Custom",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+        },
+        {
+          "answer": "Statistical Analysis",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Statistical Analysis</div><p>The <a href=\"https://www.vanderbilt.edu/datascience/\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Data Science Institute</a> offers workshops, consultations, and bootcamps related to data science and statistical analysis.</p><p><br></p><p>The <a href=\"https://www.vanderbilt.edu/biostatistics-graduate/training/\" rel=\"noopener noreferrer\" target=\"_blank\">Department of Biostatistics</a> offers workshops and clinics, supporting a wide range of needs, such as the R Clinic, Biostatistics Clinic, Clinical Research Center workshops, the Center for Quantitative Science workshops, as well as the Statistical Computing Series.</p><p><br></p><p>The <a href=\"https://www.vanderbilt.edu/biostatistics-graduate/training/\" rel=\"noopener noreferrer\" target=\"_blank\">Kennedy Center</a> also offers Biostatistics an Bioinformatics education and consultation in experimental design, data collection and storage, analysis, and interpretation of findings.</p>"
+        },
+        {
+          "answer": "Geospatial Analysis",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Geospatial Analysis Resources</div><p><a href=\"https://www.vanderbilt.edu/sarl/\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Spatial Analysis Research Lab</a></p><p><a href=\"http://www.library.vanderbilt.edu/scholarly/gis.php\" rel=\"noopener noreferrer\" target=\"_blank\">Jean and Alexander Heard Library</a></p><p><a href=\"https://research.vanderbilt.edu/rit‑overview/short‑term‑consultation‑and‑programming/\" rel=\"noopener noreferrer\" target=\"_blank\">Research Software Engineer for Hire</a></p>"
+        },
+        {
+          "answer": "Big Data",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Big Data</div><p>Data Science Institute</p>"
+        },
+        {
+          "answer": "Not Sure",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+        }
+      ]
+    },
+    {
+      "answer": "Custom Programming Solutions",
+      "class": "yellow",
+      "message": "<div class=\"message-header\">Custom Programming Solutions</div><br /><h2>Research IT wants to connect you with a programmer that can best fit your need. The selections below do not include all supported languages</h2><p>What type of programming solution or language do you need support with?</p>",
+      "decisions": [
+        {
+          "answer": "Web development, e.g., HTML, JavaScript, CSS",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Research Software Engineer for Hire</div><p>Contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/short‑term‑consultation‑and‑programming/\" rel=\"noopener noreferrer\" target=\"_blank\">Research Software Engineer for Hire</a></p>"
+        },
+        {
+          "answer": "Software development, e.g., Python, C, C++, Java",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Research Software Engineer for Hire</div><p>Contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/short‑term‑consultation‑and‑programming/\" rel=\"noopener noreferrer\" target=\"_blank\">Research Software Engineer for Hire</a></p>"
+        },
+        {
+          "answer": "Data Analytics, e.g., Python, R",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Research Software Engineer for Hire</div><p>Contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/short‑term‑consultation‑and‑programming/\" rel=\"noopener noreferrer\" target=\"_blank\">Research Software Engineer for Hire</a></p>"
+        },
+        {
+          "answer": "I don't see what I need",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+        }
+      ]
+    },
+    {
+      "answer": "Training and Education",
+      "class": "yellow",
+      "message": "<div class=\"message-header\">Training and Education</div><br /><h2>At Vanderbilt, we have many training resources availble, both free and paid. If you don't see the type of training you need, please suggest it as a topic using the feedback option.</h2><p>What type of training do you need?</p>",
+      "decisions": [
+        {
+          "answer": "High-Performance Computation",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+        },
+        {
+          "answer": "Data Science Methods",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Data Science Institute</div><p>Please contact the <a href=\"https://www.vanderbilt.edu/datascience/events/data-science-workshops/\" rel=\"noopener noreferrer\" target=\"_blank\">Data Science Institute</a></p>"
+        },
+        {
+          "answer": "Git and Version Control",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Training and Resources</div><p>Vanderbilt Research IT, Data Science Institute, ACCRE, and the Library offers <a href=\"https://research.vanderbilt.edu/researchadministration/about/research-it/rit-overview/education-and-training/\" rel=\"noopener noreferrer\" target=\"_blank\">Software Carpentry</a> bootcamps twice a semester. Unix, Git and Version Control, R, and Python are taught on a rotating basis.</p><p><br></p><p>The Data Science Institute offers workshops and bootcamps on R and Python. Please check their <a href=\"https://www.vanderbilt.edu/datascience/events/data-science-workshops/\" rel=\"noopener noreferrer\" target=\"_blank\">website</a> for updated offerings.</p><p><br></p><p>For gentle introductions to various digital skills please visit the <a href=\"https://www.library.vanderbilt.edu/scholarly/workshops.php\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Library Digital Scholarship and Communications</a> website.</p>"
+        },
+        {
+          "answer": "Python",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Training and Resources</div><p>Vanderbilt Research IT, Data Science Institute, ACCRE, and the Library offers <a href=\"https://research.vanderbilt.edu/researchadministration/about/research-it/rit-overview/education-and-training/\" rel=\"noopener noreferrer\" target=\"_blank\">Software Carpentry</a> bootcamps twice a semester. Unix, Git and Version Control, R, and Python are taught on a rotating basis.</p><p><br></p><p>The Data Science Institute offers workshops and bootcamps on R and Python. Please check their <a href=\"https://www.vanderbilt.edu/datascience/events/data-science-workshops/\" rel=\"noopener noreferrer\" target=\"_blank\">website</a> for updated offerings.</p><p><br></p><p>For gentle introductions to various digital skills please visit the <a href=\"https://www.library.vanderbilt.edu/scholarly/workshops.php\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Library Digital Scholarship and Communications</a> website.</p>"
+        },
+        {
+          "answer": "R",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Training and Resources</div><p>Vanderbilt Research IT, Data Science Institute, ACCRE, and the Library offers <a href=\"https://research.vanderbilt.edu/researchadministration/about/research-it/rit-overview/education-and-training/\" rel=\"noopener noreferrer\" target=\"_blank\">Software Carpentry</a> bootcamps twice a semester. Unix, Git and Version Control, R, and Python are taught on a rotating basis.</p><p><br></p><p>The Data Science Institute offers workshops and bootcamps on R and Python. Please check their <a href=\"https://www.vanderbilt.edu/datascience/events/data-science-workshops/\" rel=\"noopener noreferrer\" target=\"_blank\">website</a> for updated offerings.</p><p><br></p><p>For gentle introductions to various digital skills please visit the <a href=\"https://www.library.vanderbilt.edu/scholarly/workshops.php\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Library Digital Scholarship and Communications</a> website.</p>"
+        },
+        {
+          "answer": "Geographic Information Systems",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Jean and Alexander Heard Library</div><p>The library has training and data resources.</p>"
+        },
+        {
+          "answer": "Basic Statistics",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Data Science Institute</div><p>Please contact the <a href=\"https://www.vanderbilt.edu/datascience/events/data-science-workshops/\" rel=\"noopener noreferrer\" target=\"_blank\">Data Science Institute</a></p>"
+        },
+        {
+          "answer": "My area is not listed",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+        }
+      ]
+    },
+    {
+      "answer": "Data Storage",
+      "class": "yellow",
+      "message": "<div class=\"message-header\">Data Storage</div><br /><h2>Secure Storage</h2><p>Do you need secure storage (is there a restriction on how your data may be stored and accessed?)?</p>",
+      "decisions": [
+        {
+          "answer": "Yes",
+          "class": "yellow",
+          "message": "<div class=\"message-header\">Secure Storage Options</div><br /><h2>We have multiple ways of accommodating secure storage needs. Storage options are determined by size and level of security needed for your data.Have you completed all necessary forms related to contracting your data use agreement? If not please review the requirements from  Sponsored Programs.</h2>",
+          "decisions": [
+            {
+              "answer": "Yes",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">Data Storage</div><br /><h2>At Vanderbilt we have some various data storage solutions availble. Many times the solution you need depends on the size and type of data you need to store.</h2><p>How large is the dataset you need to store?</p>",
+              "decisions": [
+                {
+                  "answer": "Less than 1 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">Vanderbilt Storage Resources</div><p><a href=\"https://vanderbilt.account.box.com/login\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Box</a> and <a href=\"https://it.vanderbilt.edu/services/catalog/collaboration_and_communication/collaboration/OneDrive_for_Business.php\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt One Drive</a> are free storage solutions with a maximum file upload size of 15 GB.</p>"
+                },
+                {
+                  "answer": "More than 1 TB but less than 10 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+                },
+                {
+                  "answer": "10‑100 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+                },
+                {
+                  "answer": "More than 100 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+                }
+              ]
+            },
+            {
+              "answer": "No",
+              "class": "red",
+              "message": "<div class=\"message-header\">Data Storage</div><br /><h2>At Vanderbilt we have some various data storage solutions availble. Many times the solution you need depends on the size and type of data you need to store.</h2><p>How large is the dataset you need to store?</p>",
+              "decisions": [
+                {
+                  "answer": "Less than 1 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">Vanderbilt Storage Resources</div><p><a href=\"https://vanderbilt.account.box.com/login\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Box</a> and <a href=\"https://it.vanderbilt.edu/services/catalog/collaboration_and_communication/collaboration/OneDrive_for_Business.php\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt One Drive</a> are free storage solutions with a maximum file upload size of 15 GB.</p>"
+                },
+                {
+                  "answer": "More than 1 TB but less than 10 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+                },
+                {
+                  "answer": "10‑100 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+                },
+                {
+                  "answer": "More than 100 TB",
+                  "class": "yellow",
+                  "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+                }
+              ]
+            },
+            {
+              "answer": "I don't know",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+            }
+          ]
+        },
+        {
+          "answer": "No",
+          "class": "red",
+          "message": "<div class=\"message-header\">Data Storage</div><br /><h2>At Vanderbilt we have some various data storage solutions availble. Many times the solution you need depends on the size and type of data you need to store.</h2><p>How large is the dataset you need to store?</p>",
+          "decisions": [
+            {
+              "answer": "Less than 1 TB",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">Vanderbilt Storage Resources</div><p><a href=\"https://vanderbilt.account.box.com/login\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt Box</a> and <a href=\"https://it.vanderbilt.edu/services/catalog/collaboration_and_communication/collaboration/OneDrive_for_Business.php\" rel=\"noopener noreferrer\" target=\"_blank\">Vanderbilt One Drive</a> are free storage solutions with a maximum file upload size of 15 GB.</p>"
+            },
+            {
+              "answer": "More than 1 TB but less than 10 TB",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+            },
+            {
+              "answer": "10‑100 TB",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">ACCRE</div><p>Contact ACCRE for more information.</p>"
+            },
+            {
+              "answer": "More than 100 TB",
+              "class": "yellow",
+              "message": "<div class=\"message-header\">Contact Research IT</div><p>Please contact the <a href=\"https://research.vanderbilt.edu/rit‑overview/staff/\" rel=\"noopener noreferrer\" target=\"_blank\">Research IT Consultant.</a></p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
