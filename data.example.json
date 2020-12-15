@@ -43,7 +43,7 @@
     {
       "answer": "Data Analysis",
       "class": "yellow",
-      "message": "<div class=\"message-header\">Data Analysis</div><br /><h3>Data analysis comes in many flavors, the solution depends on the type of outcome or research you are performing. Some of these types of analysis overlap, so choose the answer that best fits your need</h3><p>What type of analysis do you need?</p>",
+      "message": "<div class=\"message-header\">Data Analysis</div><br /><h2>Data analysis comes in many flavors, the solution depends on the type of outcome or research you are performing. Some of these types of analysis overlap, so choose the answer that best fits your need</h2><p>What type of analysis do you need?</p>",
       "decisions": [
         {
           "answer": "Custom",
@@ -102,7 +102,7 @@
     {
       "answer": "Training and Education",
       "class": "yellow",
-      "message": "<div class=\"message-header\">Training and Education</div><br /><h3>At Vanderbilt, we have many training resources availble, both free and paid. If you don't see the type of training you need, please suggest it as a topic using the feedback option.</h3><p>What type of training do you need?</p>",
+      "message": "<div class=\"message-header\">Training and Education</div><br /><h2>At Vanderbilt, we have many training resources availble, both free and paid. If you don't see the type of training you need, please suggest it as a topic using the feedback option.</h2><p>What type of training do you need?</p>",
       "decisions": [
         {
           "answer": "High-Performance Computation",

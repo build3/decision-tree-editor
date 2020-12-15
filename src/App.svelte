@@ -1,28 +1,27 @@
 <script>
   import Swal from 'sweetalert2';
 
+  import formatImportedData from './formatImportedData.js';
+  import stringifiedData from './stringifiedDataStore.js';
+  import MessageEditor from './MessageEditor.svelte';
   import Decisions from './Decisions.svelte';
-  import removeRedundantDecisionsData from './removeRedundantDecisionData';
 
   let importedData;
 
   let data = {
+    header: '',
+    title: '',
     message: '',
     decisions: [],
   };
 
-  $: stringifiedData = JSON.stringify(
-    {
-      ...data,
-      decisions: removeRedundantDecisionsData(data.decisions),
-    },
-    null,
-    2,
-  );
+  $: {
+    stringifiedData.debouncedSet(data);
+  }
 
   const onJsonImport = () => {
     try {
-      data = JSON.parse(importedData);
+      data = formatImportedData(importedData);
 
       Swal.fire({
         title: 'JSON data imported successfully',
@@ -45,7 +44,7 @@
 
   const onCopyToClipboard = () => {
     navigator.clipboard
-      .writeText(stringifiedData)
+      .writeText($stringifiedData)
       .then(() => {
         Swal.fire({
           title: 'Copied to clipboard',
@@ -91,10 +90,15 @@
   <section>
     <div class="topLabel"><b>Edit the data here</b></div>
     <div class="scrollableFullContainer">
-      <div class="inputRowVertical">
-        <div>Message</div>
-        <textarea rows="5" bind:value={data.message} />
+      <div class="inputRow">
+        <div>Header</div>
+        <input type="text" bind:value={data.header} />
       </div>
+      <div class="inputRow">
+        <div>Title</div>
+        <input type="text" bind:value={data.title} />
+      </div>
+      <MessageEditor bind:value={data.message} />
       <Decisions bind:decisions={data.decisions} />
     </div>
   </section>
@@ -108,6 +112,6 @@
         </button>
       </div>
     </div>
-    <textarea readonly value={stringifiedData} />
+    <textarea readonly value={$stringifiedData} />
   </section>
 </main>

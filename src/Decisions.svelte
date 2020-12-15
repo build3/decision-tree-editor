@@ -2,6 +2,7 @@
   import Swal from 'sweetalert2';
 
   import AddButton from './AddButton.svelte';
+  import MessageEditor from './MessageEditor.svelte';
   import RemoveButton from './RemoveButton.svelte';
   import CollapseButton from './CollapseButton.svelte';
 
@@ -10,8 +11,10 @@
 
   const onAddDecision = () => {
     decisions = [
-      ...decisions,
+      ...(decisions || []),
       {
+        header: '',
+        title: '',
         message: '',
         class: '',
         answer: '',
@@ -21,11 +24,11 @@
   };
 
   const removeDecision = (removedIndex) => {
-    decisions = decisions.filter((_, index) => index !== removedIndex);
+    decisions = (decisions || []).filter((_, index) => index !== removedIndex);
   };
 
   const onToggleCollapsed = (collapsedIndex) => {
-    decisions = decisions.map((decision, index) => {
+    decisions = (decisions || []).map((decision, index) => {
       if (index === collapsedIndex) {
         return {
           ...decision,
@@ -112,39 +115,46 @@
   }
 </style>
 
-{#each decisions as decision, index}
-  <article class="decisionContainer" style={articleStyle}>
-    <div class="decisionDataContainer">
-      <div class="inputRow">
-        <b>Decision {index + 1}</b>
-        <RemoveButton on:click={() => onRemoveDecision(index)} />
-      </div>
-      <div class="inputRowVertical">
-        <div>Message</div>
-        <textarea rows="5" bind:value={decision.message} />
-      </div>
-      <div class="inputRow">
-        <span>Class</span><input bind:value={decision.class} />
-      </div>
-      <div class="inputRow">
-        <span>Answer</span><input bind:value={decision.answer} />
-      </div>
-      {#if decision.decisions && decision.decisions.length > 0}
-        <div
-          class="decisionLabelContainer clickable"
-          on:click={() => onToggleCollapsed(index)}>
-          <div>Decisions</div>
-          <CollapseButton rotated={decision.collapsed} />
+{#if decisions}
+  {#each decisions as decision, index}
+    <article class="decisionContainer" style={articleStyle}>
+      <div class="decisionDataContainer">
+        <div class="inputRow">
+          <b>Decision {index + 1}</b>
+          <RemoveButton on:click={() => onRemoveDecision(index)} />
         </div>
-      {/if}
-      {#if !decision.collapsed}
-        <svelte:self
-          level={(level + 1) % 4}
-          bind:decisions={decision.decisions} />
-      {/if}
-    </div>
-  </article>
-{/each}
+        <div class="inputRow">
+          <span>Answer</span><input bind:value={decision.answer} />
+        </div>
+        <div class="inputRow">
+          <span>Class</span><input bind:value={decision.class} />
+        </div>
+        <div class="inputRow">
+          <div>Header</div>
+          <input type="text" bind:value={decision.header} />
+        </div>
+        <div class="inputRow">
+          <div>Title</div>
+          <input type="text" bind:value={decision.title} />
+        </div>
+        <MessageEditor bind:value={decision.message} />
+        {#if decision.decisions && decision.decisions.length > 0}
+          <div
+            class="decisionLabelContainer clickable"
+            on:click={() => onToggleCollapsed(index)}>
+            <div>Decisions</div>
+            <CollapseButton rotated={decision.collapsed} />
+          </div>
+        {/if}
+        {#if !decision.collapsed}
+          <svelte:self
+            level={(level + 1) % 4}
+            bind:decisions={decision.decisions} />
+        {/if}
+      </div>
+    </article>
+  {/each}
+{/if}
 
 <article
   class="decisionContainer clickable"

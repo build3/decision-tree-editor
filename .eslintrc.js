@@ -26,5 +26,11 @@ module.exports = {
     'import/no-duplicates': 'off',
     'import/no-mutable-exports': 'off',
     'import/no-unresolved': 'off',
-  }
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+    ],
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+  },
 };
